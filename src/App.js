@@ -9,21 +9,15 @@ import Footer from './components/Footer';
 
 function App() {
   const [todolist, setToDoList] = React.useState([
-    { id: 1, task: 'Buy groceries', completed: false },
-    { id: 2, task: 'Walk the dog', completed: false },
-    { id: 3, task: 'Read a book', completed: false }
+    { id: 1, task: 'Buy groceries', completed: false, NotCompleted: true },
+    { id: 2, task: 'Walk the dog', completed: false, NotCompleted: true },
+    { id: 3, task: 'Read a book', completed: false, NotCompleted: true }
   ]);
-  const [contactForm, setContactForm] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    comments: ""
-  });
 
   return (
     <>
         <Header />
-        <ToDoList />
+        <ToDoList todolist={todolist} />
     </>
   )
 }
