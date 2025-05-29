@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { Routes} from './Routes';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header';
 import ToDoList from './components/ToDoList'
@@ -16,8 +17,8 @@ function App() {
 
   return (
     <>
-        <Header />
-        <ToDoList todolist={todolist} />
+       {/* <Header /> */}
+        <Routes />
     </>
   )
 }
