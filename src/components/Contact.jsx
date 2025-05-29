@@ -9,18 +9,22 @@ export default function Contact() {
         First Name:
         <input type="text" name="firstName" />
       </label>
+      <br />
       <label>
         Last Name:
         <input type="text" name="lastName" />
       </label>
+      <br />
       <label>
         Email:
         <input type="email" name="email" />
       </label>
+      <br />
       <label>
         Message:
         <textarea name="message" />
       </label>
+      <br />
       <button type="submit">Submit</button>
     </form>
     </>
