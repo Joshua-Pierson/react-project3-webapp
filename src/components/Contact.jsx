@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 
 export default function Contact() {
-  const [contactData, setContactData] = useState({
+  const [contactForm, setContactForm] = useState({
         firstName: "",
         lastName: "",
         email: "",
