@@ -9,9 +9,9 @@ import Footer from './components/Footer';
 
 function App() {
   const [todolist, setToDoList] = React.useState([
-    { id: 1, task: 'Buy groceries', completed: false, NotCompleted: true },
-    { id: 2, task: 'Walk the dog', completed: false, NotCompleted: true },
-    { id: 3, task: 'Read a book', completed: false, NotCompleted: true }
+    { id: 1, task: 'Buy groceries', Status: 'Not Started', completed: <button>Complete</button>, delete: <button>Delete</button>},
+    { id: 2, task: 'Walk the dog', Status: 'Not Started', completed: <button>Complete</button>, delete: <button>Delete</button>},
+    { id: 3, task: 'Read a book', Status: 'Not Started', completed: <button>Complete</button>, delete: <button>Delete</button>},
   ]);
 
   return (
