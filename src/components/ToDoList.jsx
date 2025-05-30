@@ -10,20 +10,32 @@ export default function ToDoList({todolist}) {
     ));
 
 
-    const handleCompleteButtonClick = () => {}
+    function handleCompleteButtonClick() {}
 
-    const handleDeleteButtonClick = () => {}
+    // Function to handle delete button click
+    function handleDeleteButtonClick() {}
 
-  const handleAddTaskButtonClick = () => {}
+    // Function to handle adding a new task
+    function handleAddTask (e) {
+      e.preventDefault();
+      const newTask = prompt("Enter a new task:");
+      if (newTask) {
+        const newItem = {
+          id: todolist.length + 1,
+          task: newTask,
+          Status: 'Not Started',
+          completed: <button onClick={handleCompleteButtonClick}>Complete</button>,
+          delete: <button onClick={handleDeleteButtonClick}>Delete</button>
+        };
+        todolist.push(newItem);
+        
 
-
-
-    
-    
+      }
+    }
 
   return (
     <>
-    <button>Add Task </button>
+    <button onClick={handleAddTask}>Add Task </button>
     <Table striped bordered hover>
       <thead>
         <tr>
