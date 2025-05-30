@@ -17,7 +17,7 @@ function App() {
   return (
     <>
         <Header />
-        <ToDoList todolist={todolist} />
+        <ToDoList todolist={todolist} setToDoList={setToDoList} />
     </>
   )
 }

@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 import Table from 'react-bootstrap/Table';
 
 
-export default function ToDoList({todolist}) {
-  const ItemComponent = ({ item }) => <li>{item.id}, {item.task}, {item.completed ? 'Yes' : 'No'}, {item.NotCompleted ? 'Yes' : 'No'}</li>;
+export default function ToDoList({todolist, setToDoList}) {
+  const ItemComponent = ({ item }) => <li>{item.id}, {item.task}, {item.status}, {item.completed}, {item.delete}</li>;
 
     const renderedItems = todolist.map((item) => (
       <ItemComponent key={item.id} item={item} />
@@ -23,11 +23,11 @@ export default function ToDoList({todolist}) {
         const newItem = {
           id: todolist.length + 1,
           task: newTask,
-          Status: 'Not Started',
+          status: 'Not Started',
           completed: <button onClick={handleCompleteButtonClick}>Complete</button>,
           delete: <button onClick={handleDeleteButtonClick}>Delete</button>
         };
-        todolist.push(newItem);
+        setToDoList([...todolist, newItem]);
         
 
       }
@@ -51,7 +51,7 @@ export default function ToDoList({todolist}) {
           <tr key={item.id}>
             <td>{item.id}</td>
             <td>{item.task}</td>
-            <td>{item.Status}</td>
+            <td>{item.status}</td>
             <td>{item.completed}</td>
             <td>{item.delete}</td>
           </tr>
