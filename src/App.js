@@ -22,7 +22,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/homepage" element={<HomePage />} />
-        <Route path="/todo" element={<ToDoList todolist={todolist} setToDoList={setToDoList} />} />
+        <Route path="/todo" element={<ToDoList todolist={todolist} setToDoList={setToDoList}  />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />

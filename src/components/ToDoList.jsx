@@ -9,9 +9,11 @@ export default function ToDoList({todolist, setToDoList}) {
       <ItemComponent key={item.id} item={item} />
     ));
 
-
-    function handleCompleteButtonClick() {}
+    // Function to handle complete button click
+   function handleCompleteButtonClick() {}
     
+
+
     // Function to handle delete button click
     function handleDeleteButtonClick() {}
 
