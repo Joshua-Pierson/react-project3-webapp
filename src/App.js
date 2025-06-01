@@ -1,9 +1,12 @@
 import React, {useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import HomePage from './components/HomePage';
 import Header from './components/Header';
-import ToDoList from './components/ToDoList'
+import ToDoList from './components/ToDoList';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 
 
 
@@ -15,11 +18,16 @@ function App() {
   ]);
 
   return (
-    <>
-        <Header />
-        <ToDoList todolist={todolist} setToDoList={setToDoList} />
-    </>
-  )
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/homepage" element={<HomePage />} />
+        <Route path="/todo" element={<ToDoList todolist={todolist} setToDoList={setToDoList} />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+      <Footer />
+    </Router>
+  );
 }
 
 export default App;
