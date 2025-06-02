@@ -10,12 +10,21 @@ export default function ToDoList({todolist, setToDoList}) {
     ));
 
     // Function to handle complete button click
-   function handleCompleteButtonClick() {}
-    
+   function handleCompleteButtonClick(id) {
+  const updatedList = todolist.map(completeTask =>
+    completeTask.id === id ? { ...completeTask, status: 'Completed' } : completeTask
+  );
+  setToDoList(updatedList);
+}
 
 
     // Function to handle delete button click
-    function handleDeleteButtonClick() {}
+    function handleDeleteButtonClick(id) {
+      const deletedList = todolist.filter(deleteTask =>
+        deleteTask.id !== id
+      );
+      setToDoList(deletedList);
+    }
 
     // Function to handle adding a new task
     function handleAddTask (e) {
@@ -26,8 +35,8 @@ export default function ToDoList({todolist, setToDoList}) {
           id: todolist.length + 1,
           task: newTask,
           status: 'Not Started',
-          completed: <button onClick={handleCompleteButtonClick}>Complete</button>,
-          delete: <button onClick={handleDeleteButtonClick}>Delete</button>
+          completed: '',
+          delete: ' '
         };
         setToDoList([...todolist, newItem]);
         
@@ -54,8 +63,8 @@ export default function ToDoList({todolist, setToDoList}) {
             <td>{item.id}</td>
             <td>{item.task}</td>
             <td>{item.status}</td>
-            <td>{item.completed}</td>
-            <td>{item.delete}</td>
+            <td>{<button onClick={() => handleCompleteButtonClick(item.id)}>Complete</button>}</td>
+            <td>{<button onClick={() => handleDeleteButtonClick(item.id)}>Delete</button>}</td>
           </tr>
         ))}
       </tbody>
