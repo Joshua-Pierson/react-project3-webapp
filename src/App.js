@@ -12,9 +12,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   const [todolist, setToDoList] = React.useState([
-    { id: 1, task: 'Buy groceries', status: 'Not Started', completed:' ', delete:  ' ' },
-    { id: 2, task: 'Walk the dog', status: 'Not Started', completed:' ', delete:  ' ' },
-    { id: 3, task: 'Read a book', status: 'Not Started', completed:' ', delete:  ' ' },
+    { id: 1, task: 'Buy groceries', status: 'Not Completed', completed:' ', delete:  ' ' },
+    { id: 2, task: 'Walk the dog', status: 'Not Completed', completed:' ', delete:  ' ' },
+    { id: 3, task: 'Read a book', status: 'Not Completed', completed:' ', delete:  ' ' },
   ]);
 
   return (

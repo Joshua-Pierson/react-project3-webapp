@@ -35,7 +35,7 @@ export default function ToDoList({todolist, setToDoList}) {
         const newItem = {
           id: todolist.length + 1,
           task: newTask,
-          status: 'Not Started',
+          status: 'Not Completed',
           completed: '',
           delete: ' '
         };
