@@ -4,8 +4,8 @@ export default function Contact() {
     const [contactData, setContactData] = useState({
         firstName: "",
         lastName: "",
-        email: "",
-        message: ""
+        email: " ",
+        message: " "
     })
     function handleChange(e) {
         const {name, value} = e.target
@@ -43,6 +43,7 @@ export default function Contact() {
       <br />
       <button onClick={handleSubmit}>Submit</button>
     </form>
+    <hr />
     </>
   )
 }

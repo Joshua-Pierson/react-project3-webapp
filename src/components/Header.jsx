@@ -4,10 +4,12 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import HomePage from './HomePage';
 
 
 export default function Header() {
   return (
+    <>
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
         <Navbar.Brand as={Link} to="/homepage">To-Do List Maker</Navbar.Brand>
@@ -20,6 +22,7 @@ export default function Header() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    </>
   );
 }
 

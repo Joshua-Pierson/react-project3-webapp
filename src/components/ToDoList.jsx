@@ -75,7 +75,7 @@ export default function ToDoList({todolist, setToDoList}) {
         </tbody>
       </Table>
       {console.log(todolist)}
+      <hr />
       </>
-      
   );
 }

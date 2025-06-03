@@ -8,6 +8,8 @@ export default function HomePage() {
         <p>Get started by navigating to the To-Do List page.</p>
         <p>Feel free to reach out through the Contact Form for any questions or feedback.</p>
         <p>Happy organizing!</p>
+        <hr />
     </>
+   
   )
 }
