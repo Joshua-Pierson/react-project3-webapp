@@ -24,6 +24,10 @@ export default function ToDoList({todolist, setToDoList}) {
       const deletedList = todolist.filter(item =>
         item.id !== id
       );
+      if (deletedList) {
+        const lastItem = deletedList[deletedList.length - 1];
+        lastItem.id = todolist.length - 1;
+      }
       setToDoList(deletedList);
     }
 
