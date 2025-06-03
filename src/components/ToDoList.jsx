@@ -9,19 +9,20 @@ export default function ToDoList({todolist, setToDoList}) {
       <ItemComponent key={item.id} item={item} />
     ));
 
+
     // Function to handle complete button click
-   function handleCompleteButtonClick(id) {
-  const updatedList = todolist.map(completeTask =>
-    completeTask.id === id ? { ...completeTask, status: 'Completed' } : completeTask
-  );
-  setToDoList(updatedList);
-}
+    function handleCompleteButtonClick(id) {
+      const updatedList = todolist.map(item =>
+        item.id === id ? { ...item, status: 'Completed' } : item
+      );
+      setToDoList(updatedList);
+    }
 
 
     // Function to handle delete button click
     function handleDeleteButtonClick(id) {
-      const deletedList = todolist.filter(deleteTask =>
-        deleteTask.id !== id
+      const deletedList = todolist.filter(item =>
+        item.id !== id
       );
       setToDoList(deletedList);
     }
@@ -44,32 +45,33 @@ export default function ToDoList({todolist, setToDoList}) {
       }
     }
 
-  return (
-    <>
-    <button onClick={handleAddTask}>Add Task </button>
-    <Table striped bordered hover>
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Task</th>
-          <th>Status</th>
-          <th>Complete</th>
-          <th>Delete</th>
-        </tr>
-      </thead>
-      <tbody>
-        {todolist.map((item) => (
-          <tr key={item.id}>
-            <td>{item.id}</td>
-            <td>{item.task}</td>
-            <td>{item.status}</td>
-            <td>{<button onClick={() => handleCompleteButtonClick(item.id)}>Complete</button>}</td>
-            <td>{<button onClick={() => handleDeleteButtonClick(item.id)}>Delete</button>}</td>
+    return (
+      <>
+      <button onClick={handleAddTask}>Add Task </button>
+      <Table striped bordered hover>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Task</th>
+            <th>Status</th>
+            <th>Complete</th>
+            <th>Delete</th>
           </tr>
-        ))}
-      </tbody>
-    </Table>
-    {console.log(todolist)}
-    </>
-  )
+        </thead>
+        <tbody>
+          {todolist.map((item) => (
+            <tr key={item.id}>
+              <td>{item.id}</td>
+              <td>{item.task}</td>
+              <td>{item.status}</td>
+              <td>{<button onClick={() => handleCompleteButtonClick(item.id)}>Complete</button>}</td>
+              <td>{<button onClick={() => handleDeleteButtonClick(item.id)}>Delete</button>}</td>
+            </tr>
+          ))}
+        </tbody>
+      </Table>
+      {console.log(todolist)}
+      </>
+      
+  );
 }
