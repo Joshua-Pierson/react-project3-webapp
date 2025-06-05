@@ -5,7 +5,7 @@ The objective is to create a simple, user-friendly app that helps you create, ma
 
 ## Screen Shot
 
-### Main / Home page 
+### Main/Home page 
 <img src="./Images/Home-Page.png#">
 
 ### When Clicked To-Do List tab
@@ -52,15 +52,15 @@ With features focused on ease-of-use and efficiency, you'll be able to:
 
 ## Wireframe
 
-### Mainpage after search button clicked
-<img src="./#">
+### Main/Home page
+<img src="./Images/WireFrame.png#">
 
 ## Next Steps
-* I want To Create a Button so that the user can email themselves there To-Do List
+* I want to add an "Email My To-Do List" Button, that will allow users to send their current to-do list to their email.
 
-* 
+* I would improve task organization by adding categories or priority levels (e.g., "Work", "Personal", "Urgent").
  
-* 
+* I would also futher more improve task organization by creating a way to  users filter or sort tasks based on category or status.
 
 ## Author
 Joshua Pierson: <a href="https://www.linkedin.com/in/joshua-pierson726" rel="nofollow">@Linkedin</a>
