@@ -18,32 +18,33 @@ export default function Contact() {
     }
 
   return (
-    <>
-    <h2>Contact Form</h2>
-    <form>
-      <label>
-        First Name:
-        <input type="text" name="firstName" onChange={handleChange} />
-      </label>
-      <br />
-      <label>
-        Last Name:
-        <input type="text" name="lastName" onChange={handleChange} />
-      </label>
-      <br />
-      <label>
-        Email:
-        <input type="email" name="email" onChange={handleChange} />
-      </label>
-      <br />
-      <label>
-        Message:
-        <textarea name="message" onChange={handleChange} />
-      </label>
-      <br />
-      <button onClick={handleSubmit}>Submit</button>
-    </form>
-    <hr />
-    </>
+    <div>
+  <h2 className="text-center mb-4">Contact Form</h2>
+  <form className="custom-form">
+    <label>
+      First Name:
+      <input type="text" name="firstName" onChange={handleChange} />
+    </label>
+    <br />
+    <label>
+      Last Name:
+      <input type="text" name="lastName" onChange={handleChange} />
+    </label>
+    <br />
+    <label>
+      Email:
+      <input type="email" name="email" onChange={handleChange} />
+    </label>
+    <br />
+    <label>
+      Message:
+      <textarea name="message" onChange={handleChange} />
+    </label>
+    <br />
+    <button onClick={handleSubmit}>Submit</button>
+  </form>
+  <hr />
+</div>
+
   )
 }

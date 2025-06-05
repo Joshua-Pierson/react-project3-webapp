@@ -22,15 +22,16 @@ export default function ToDoList({todolist, setToDoList}) {
 
     // Function to handle delete button click
     function handleDeleteButtonClick(id) {
-      const deletedList = todolist.filter(item =>
-        item.id !== id
-      );
-      if (deletedList) {
-        const lastItem = deletedList[deletedList.length - 1];
-        lastItem.id = todolist.length - 1;
-      }
-      setToDoList(deletedList);
-    }
+      const deletedList = todolist.filter(item => item.id !== id);
+
+  // Reassign IDs sequentially from 1
+  const reindexedList = deletedList.map((item, index) => ({
+    ...item,
+    id: index + 1,
+  }));
+
+  setToDoList(reindexedList);
+}
 
     // Function to handle adding a new task
     function handleAddTask (e) {
@@ -50,10 +51,22 @@ export default function ToDoList({todolist, setToDoList}) {
       }
     }
 
+    // Function to handle clearing all tasks
+    function handleClearAllTasks(e) {
+      e.preventDefault();
+      if (window.confirm("Are you sure you want to clear all tasks?")) {
+        setToDoList([]);
+      }
+    }
+  
+
     return (
       <div className="container-fluid">
+      <div className="text-center mb-4">
       <button className="mb-3" onClick={handleAddTask}>Add Task </button>
-      <Table striped bordered hover responsive="xl" >
+      <button className="mb-3 button-space" onClick={handleClearAllTasks}>Clear All </button>
+      </div>
+      <Table striped bordered hover responsive="lg">
         <thead>
           <tr>
             <th>#</th>
