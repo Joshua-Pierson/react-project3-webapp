@@ -3,6 +3,7 @@
 ## Description
 The objective is to create a simple, user-friendly app that helps you create, manage, and track tasks with ease. Stay organized and boost your productivity—all in one place.
 
+
 ## Screen Shot
 
 ### Main/Home page 
@@ -23,6 +24,7 @@ The objective is to create a simple, user-friendly app that helps you create, ma
     * CSS
     * Google Fonts
 
+
 ## About To Do List App
 The To-Do List Maker is a simple yet powerful tool designed to help you stay organized and productive. Whether you're managing daily errands, work tasks, or long-term goals, this application provides an intuitive interface for creating, editing, and tracking your to-dos.
 
@@ -31,11 +33,6 @@ With features focused on ease-of-use and efficiency, you'll be able to:
     * Keep track of completed and pending items
     * Stay focused with a clean, distraction-free layout
 
-
-
-## Test Site
-<p> To see Website: <a href="https://joshua-pierson.github.io/react-project3-webapp/"> Click Here</a></p>
-    
 
 ## User Story
 - Story 1
@@ -46,8 +43,6 @@ With features focused on ease-of-use and efficiency, you'll be able to:
 
 - Story 3
     As a user, I want to be able to delete tasks, so that I can update my list as plans change or remove items that are no longer needed.
-
-
 
 
 ## Wireframe
