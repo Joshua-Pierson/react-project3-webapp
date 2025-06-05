@@ -14,7 +14,7 @@ export default function ToDoList({todolist, setToDoList}) {
     // Function to handle complete button click
     function handleCompleteButtonClick(id) {
       const updatedList = todolist.map(item =>
-        item.id === id ? { ...item, status: 'Completed' } : item
+        item.id === id ? { ...item, status: 'Completed', task: (<span className="completed">{item.task}</span>) } : item
       );
       setToDoList(updatedList);
     }
