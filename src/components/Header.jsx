@@ -9,20 +9,20 @@ import HomePage from './HomePage';
 
 export default function Header() {
   return (
-    <>
-    <Navbar expand="lg" className="bg-body-tertiary">
-      <Container>
-        <Navbar.Brand className='sriracha-regular' as={Link} to="/homepage">To-Do List Maker</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link className='sriracha-regular' as={Link} to="/todo">To-Do List Page</Nav.Link>
-            <Nav.Link className='sriracha-regular' as={Link} to="/contact">Contact Form</Nav.Link>
-          </Nav>
+    <div>
+      <Navbar expand="lg" className="bg-body-tertiary">
+        <Container>
+          <Navbar.Brand className='sriracha-regular' as={Link} to="/homepage">To-Do List Maker</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link className='sriracha-regular' as={Link} to="/todo">To-Do List Page</Nav.Link>
+              <Nav.Link className='sriracha-regular' as={Link} to="/contact">Contact Page</Nav.Link>
+            </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
-    </>
+    </div>
   );
 }
 

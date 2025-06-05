@@ -5,21 +5,23 @@ The objective is to create a simple, user-friendly app that helps you create, ma
 
 ## Screen Shot
 
-### Main page 
-<img src="./#">
+### Main / Home page 
+<img src="./Images/Home-Page.png#">
 
-### When clicked random button
-<img src="./#">
+### When Clicked To-Do List tab
+<img src="./Images/To-Do-Page.png#">
 
-### When using the search bar
-<img src="./#">
+### When Clicked the Contact Page
+<img src="./Images/Contact-Page.png#">
 
 
 ## Technology used
     * React
     * JavaScript
-    * CSS
     * Bootstrap
+    * HTML
+    * CSS
+    * Google Fonts
 
 ## About To Do List App
 The To-Do List Maker is a simple yet powerful tool designed to help you stay organized and productive. Whether you're managing daily errands, work tasks, or long-term goals, this application provides an intuitive interface for creating, editing, and tracking your to-dos.
@@ -54,7 +56,7 @@ With features focused on ease-of-use and efficiency, you'll be able to:
 <img src="./#">
 
 ## Next Steps
-* 
+* I want To Create a Button so that the user can email themselves there To-Do List
 
 * 
  
