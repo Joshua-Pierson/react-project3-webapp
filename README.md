@@ -34,7 +34,7 @@ With features focused on ease-of-use and efficiency, you'll be able to:
 
 
 ## Test Site
-<p> To see Website: <a href="https://#"> Click Here</a></p>
+<p> To see Website: <a href="https://joshua-pierson.github.io/react-project3-webapp/"> Click Here</a></p>
     
 
 ## User Story
