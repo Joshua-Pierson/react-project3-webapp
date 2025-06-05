@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from 'react-bootstrap/Button';
 import Table from 'react-bootstrap/Table';
 
 
@@ -50,9 +51,9 @@ export default function ToDoList({todolist, setToDoList}) {
     }
 
     return (
-      <>
-      <button onClick={handleAddTask}>Add Task </button>
-      <Table striped bordered hover>
+      <div className="container">
+      <button className="mb-3" onClick={handleAddTask}>Add Task </button>
+      <Table striped bordered hover responsive="xl" >
         <thead>
           <tr>
             <th>#</th>
@@ -68,14 +69,14 @@ export default function ToDoList({todolist, setToDoList}) {
               <td>{item.id}</td>
               <td>{item.task}</td>
               <td>{item.status}</td>
-              <td>{<button onClick={() => handleCompleteButtonClick(item.id)}>Complete</button>}</td>
-              <td>{<button onClick={() => handleDeleteButtonClick(item.id)}>Delete</button>}</td>
+              <td>{<Button variant="outline-success" onClick={() => handleCompleteButtonClick(item.id)}>Complete</Button>}</td>
+              <td>{<Button variant="outline-danger" onClick={() => handleDeleteButtonClick(item.id)}>Delete</Button>}</td>
             </tr>
           ))}
         </tbody>
       </Table>
       {console.log(todolist)}
       <hr />
-      </>
+      </div>
   );
 }
