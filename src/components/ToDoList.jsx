@@ -51,7 +51,7 @@ export default function ToDoList({todolist, setToDoList}) {
     }
 
     return (
-      <div className="container">
+      <div className="container-fluid">
       <button className="mb-3" onClick={handleAddTask}>Add Task </button>
       <Table striped bordered hover responsive="xl" >
         <thead>
@@ -75,6 +75,7 @@ export default function ToDoList({todolist, setToDoList}) {
           ))}
         </tbody>
       </Table>
+    
       {console.log(todolist)}
       <hr />
       </div>

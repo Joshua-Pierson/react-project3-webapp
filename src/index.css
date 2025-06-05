@@ -38,11 +38,23 @@ input, textarea{
 
 
 
-.container {
-   margin: 0 auto; 
+.container-fluid-1 {
+  margin: 0 auto; 
   padding: 20px;
   border: 2px solid #ccc;
   border-radius: 10px;
   background-color: #f9f9f9;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/* Fonts */
+
+p{
+  font-family: "Gabriela", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Sriracha", cursive;
+  font-weight: 400;
+  font-style: normal;
 }

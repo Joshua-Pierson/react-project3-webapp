@@ -12,12 +12,12 @@ export default function Header() {
     <>
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand as={Link} to="/homepage">To-Do List Maker</Navbar.Brand>
+        <Navbar.Brand className='sriracha-regular' as={Link} to="/homepage">To-Do List Maker</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link as={Link} to="/todo">To-Do List Page</Nav.Link>
-            <Nav.Link as={Link} to="/contact">Contact Form</Nav.Link>
+            <Nav.Link className='sriracha-regular' as={Link} to="/todo">To-Do List Page</Nav.Link>
+            <Nav.Link className='sriracha-regular' as={Link} to="/contact">Contact Form</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
