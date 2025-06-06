@@ -50,6 +50,13 @@ With features focused on ease-of-use and efficiency, you'll be able to:
 ### Main/Home page
 <img src="./Images/WireFrame.png#">
 
+### To-Do Page
+<img src="./Images/WireFrame To-Do.png">
+
+### Contact Page
+<img src="./Images/WireFrame-Contact.png">
+
+
 ## Next Steps
 * I want to add an "Email My To-Do List" Button, that will allow users to send their current to-do list to their email.
 
