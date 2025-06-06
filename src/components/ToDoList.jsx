@@ -4,6 +4,7 @@ import Table from 'react-bootstrap/Table';
 
 
 export default function ToDoList({todolist, setToDoList}) {
+    const [newTask, setNewTask] = React.useState('');
   const ItemComponent = ({ item }) => <li>{item.id}, {item.task}, {item.status}, {item.completed}, {item.delete}</li>;
 
     const renderedItems = todolist.map((item) => (
@@ -34,22 +35,22 @@ export default function ToDoList({todolist, setToDoList}) {
 }
 
     // Function to handle adding a new task
-    function handleAddTask (e) {
-      e.preventDefault();
-      const newTask = prompt("Enter a new task:");
-      if (newTask) {
-        const newItem = {
-          id: todolist.length + 1,
-          task: newTask,
-          status: 'Not Completed',
-          completed: '',
-          delete: ' '
-        };
-        setToDoList([...todolist, newItem]);
-        
+    function handleAddTask(e, newTask, todolist, setToDoList, setNewTask) {
+  e.preventDefault();
 
-      }
-    }
+  if (newTask.trim()) {
+    const newItem = {
+      id: todolist.length + 1,
+      task: newTask.trim(),
+      status: 'Not Completed',
+      completed: '',
+      delete: ' '
+    };
+
+    setToDoList([...todolist, newItem]);
+    setNewTask(''); // Clear the input field
+  }
+}
 
     // Function to handle clearing all tasks
     function handleClearAllTasks(e) {
@@ -63,8 +64,18 @@ export default function ToDoList({todolist, setToDoList}) {
     return (
       <div className="container-fluid">
       <div className="text-center mb-4">
-      <button className="mb-3" onClick={handleAddTask}>Add Task </button>
-      <button className="mb-3 button-space" onClick={handleClearAllTasks}>Clear All </button>
+       <form onSubmit={(e) => handleAddTask(e, newTask, todolist, setToDoList, setNewTask)}>
+        <input
+          type="text"
+          value={newTask}
+          onChange={(e) => setNewTask(e.target.value)}
+          placeholder="Enter a new task"
+        />
+        <Button variant="outline-primary" type="submit">Add Task</Button>
+
+        <Button variant="outline-secondary" onClick={handleClearAllTasks}>Clear All Tasks</Button>
+      </form>
+
       </div>
       <Table striped bordered hover responsive="lg">
         <thead>
