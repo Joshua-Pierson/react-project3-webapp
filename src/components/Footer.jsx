@@ -6,6 +6,5 @@ export default function Footer() {
       <p>&copy; {new Date().getFullYear()} To-Do List Maker. All rights reserved.</p>
       <p>Created by <a href="https://github.com/joshua-pierson" target="_blank" rel="noopener noreferrer">Joshua Pierson</a></p>
     </div>
-
   )
 }

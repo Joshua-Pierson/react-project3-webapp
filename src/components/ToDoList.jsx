@@ -4,29 +4,29 @@ import Table from 'react-bootstrap/Table';
 
 
 export default function ToDoList({todolist, setToDoList}) {
-    const [newTask, setNewTask] = React.useState('');
+  const [newTask, setNewTask] = React.useState('');
   const ItemComponent = ({ item }) => <li>{item.id}, {item.task}, {item.status}, {item.completed}, {item.delete}</li>;
 
-    const renderedItems = todolist.map((item) => (
-      <ItemComponent key={item.id} item={item} />
-    ));
+  const renderedItems = todolist.map((item) => (
+    <ItemComponent key={item.id} item={item} />
+  ));
 
 
     // Function to handle complete button click
-    function handleCompleteButtonClick(id) {
-      const updatedList = todolist.map(item =>
-        item.id === id ? { ...item, status: 'Completed', task: (<span className="completed">{item.task}</span>) } : item
-      );
-      setToDoList(updatedList);
-    }
+  function handleCompleteButtonClick(id) {
+    const updatedList = todolist.map(item =>
+    item.id === id ? { ...item, status: 'Completed', task: (<span className="completed">{item.task}</span>) } : item
+    );
+    setToDoList(updatedList);
+  }
 
 
     // Function to handle delete button click
-    function handleDeleteButtonClick(id) {
-      const deletedList = todolist.filter(item => item.id !== id);
+  function handleDeleteButtonClick(id) {
+    const deletedList = todolist.filter(item => item.id !== id);
 
-  // Reassign IDs sequentially from 1
-  const reindexedList = deletedList.map((item, index) => ({
+    // Reassign IDs sequentially from 1
+    const reindexedList = deletedList.map((item, index) => ({
     ...item,
     id: index + 1,
   }));
@@ -35,16 +35,16 @@ export default function ToDoList({todolist, setToDoList}) {
 }
 
     // Function to handle adding a new task
-    function handleAddTask(e, newTask, todolist, setToDoList, setNewTask) {
-  e.preventDefault();
+  function handleAddTask(e, newTask, todolist, setToDoList, setNewTask) {
+    e.preventDefault();
 
-  if (newTask.trim()) {
-    const newItem = {
-      id: todolist.length + 1,
-      task: newTask.trim(),
-      status: 'Not Completed',
-      completed: '',
-      delete: ' '
+    if (newTask.trim()) {
+      const newItem = {
+        id: todolist.length + 1,
+        task: newTask.trim(),
+        status: 'Not Completed',
+        completed: '',
+        delete: ' '
     };
 
     setToDoList([...todolist, newItem]);
@@ -53,18 +53,17 @@ export default function ToDoList({todolist, setToDoList}) {
 }
 
     // Function to handle clearing all tasks
-    function handleClearAllTasks(e) {
-      e.preventDefault();
-      if (window.confirm("Are you sure you want to clear all tasks?")) {
-        setToDoList([]);
-      }
+  function handleClearAllTasks(e) {
+    e.preventDefault();
+    if (window.confirm("Are you sure you want to clear all tasks?")) {
+      setToDoList([]);
     }
-  
+  }
 
-    return (
-      <div className="container-fluid">
+  return (
+    <div className="container-fluid">
       <div className="text-center mb-4">
-       <form onSubmit={(e) => handleAddTask(e, newTask, todolist, setToDoList, setNewTask)}>
+        <form onSubmit={(e) => handleAddTask(e, newTask, todolist, setToDoList, setNewTask)}>
         <input
           type="text"
           value={newTask}
