@@ -44,5 +44,6 @@
   "devDependencies": {
     "gh-pages": "^6.3.0"
   },
-  "homepage": "https://Joshua-Pierson.github.io/react-project3-webapp/"
+  "homepage": "https://Joshua-Pierson.github.io/react-project3-webapp/home/"
 }
+
