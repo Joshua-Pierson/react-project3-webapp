@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-project3-webapp/home/static/css/main.5db54335.css",
-    "main.js": "/react-project3-webapp/home/static/js/main.29806d45.js",
-    "static/js/453.6c486068.chunk.js": "/react-project3-webapp/home/static/js/453.6c486068.chunk.js",
-    "index.html": "/react-project3-webapp/home/index.html",
-    "main.5db54335.css.map": "/react-project3-webapp/home/static/css/main.5db54335.css.map",
-    "main.29806d45.js.map": "/react-project3-webapp/home/static/js/main.29806d45.js.map",
-    "453.6c486068.chunk.js.map": "/react-project3-webapp/home/static/js/453.6c486068.chunk.js.map"
+    "main.css": "/react-project3-webapp/static/css/main.5db54335.css",
+    "main.js": "/react-project3-webapp/static/js/main.456ff652.js",
+    "static/js/453.6c486068.chunk.js": "/react-project3-webapp/static/js/453.6c486068.chunk.js",
+    "index.html": "/react-project3-webapp/index.html",
+    "main.5db54335.css.map": "/react-project3-webapp/static/css/main.5db54335.css.map",
+    "main.456ff652.js.map": "/react-project3-webapp/static/js/main.456ff652.js.map",
+    "453.6c486068.chunk.js.map": "/react-project3-webapp/static/js/453.6c486068.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5db54335.css",
-    "static/js/main.29806d45.js"
+    "static/js/main.456ff652.js"
   ]
 }
