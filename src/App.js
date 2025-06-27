@@ -24,7 +24,6 @@ function App() {
     <div >
     <Router>
       <Header />
-      <HomePage />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/homepage" element={<HomePage />} />
