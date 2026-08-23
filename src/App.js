@@ -34,7 +34,7 @@ function App() {
     },
   ]);
 
-  rreturn(
+  return(
     <div>
       <Router>
         <Header />
