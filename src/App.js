@@ -37,7 +37,7 @@ function App() {
   return (
     <div>
       <Router>
-        <Header />
+        <HomePage />
 
         <Routes>
           <Route path="/" element={<HomePage />} />
