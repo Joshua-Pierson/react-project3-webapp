@@ -11,7 +11,7 @@ export default function Header() {
     <div>
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
-          <Navbar.Brand className="sriracha-regular" as={Link} to="/">
+          <Navbar.Brand className="sriracha-regular" as={Link} to="/homepage">
             To-Do List Maker
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
