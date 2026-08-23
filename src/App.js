@@ -34,22 +34,25 @@ function App() {
     },
   ]);
 
-  return (
+  rreturn(
     <div>
       <Router>
         <Header />
+
         <Routes>
-          <Route path="/homepage" element={<HomePage />} />
+          <Route path="/" element={<HomePage />} />
+
           <Route
             path="/todo"
             element={<ToDoList todolist={todolist} setToDoList={setToDoList} />}
           />
+
           <Route path="/contact" element={<Contact />} />
-          <Route path="/" element={<HomePage />} />
         </Routes>
+
         <Footer />
       </Router>
-    </div>
+    </div>,
   );
 }
 
